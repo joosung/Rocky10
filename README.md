@@ -16,10 +16,10 @@ SSH와 SFTP 는 필히 root 권한으로 접속 합니다.
 <pre>
 dnf -y install git \
 && cd /root/ \
-dnf -y git clone https://github.com/joosung/Rocky10.git \
+&& git clone https://github.com/joosung/Rocky10.git \
 && mv Rocky10 AAI \
 && cd AAI \
-&& chmod 700 install.sh
+&& chmod 700 install.sh \
 && sh install.sh
 </pre>
 

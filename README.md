@@ -17,7 +17,7 @@ SSH와 SFTP 는 필히 root 권한으로 접속 합니다.
 dnf -y install git \
 && cd /root/ \
 && git clone https://github.com/joosung/Rocky10.git \
-&& mv Rocky10 AAI
+&& mv Rocky10-main AAI
 && cd AAI \
 && sh install.sh
 </pre>

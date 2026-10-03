@@ -120,10 +120,16 @@ dnf config-manager --set-enabled crb
 
 dnf module list php
 dnf  -y module reset php
+
+#php 변경시 아래 php:remi-8.5를 php:remi-7.4와 같이 (7.4, 8.0, 8.1, 8.2, 83, 8.4, 8.5, 8.6)버전만 변경하시면 됩니다.
 dnf  -y module enable php:remi-8.5
+
+#php 8.6으로 변경시 아래 소스에  #주석을 추가하고 설치 하시면 됩니다.
 dnf -y install php php-cli php-fpm php-curl php-mysqlnd php-gd php-opcache php-zip php-intl php-common php-bcmath php-imagick php-xmlrpc php-json php-readline php-redis php-mbstring php-apcu php-xml php-dom php-redis php-memcached php-memcache php-devel
- 
- systemctl restart httpd
+#php 8.6으로 변경시 아래 소스에 #주석을 제거하고 설치 하시면 됩니다.
+#dnf -y install php php-cli php-fpm php-common php-pdo php-mysqlnd php-mbstring php-opcache php-xml php-gd php-fileinfo php-soap php-devel php-json php-ldap php-iconv php-snmp php-pecl-apcu php-pgsql php-process
+
+systemctl restart httpd
 
 dnf -y install GeoIP GeoIP-data GeoIP-devel 
 
